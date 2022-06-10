@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
 })
 
 const port = process.env.port || 5000
-server.listen(process.env.port || 5000, () => {
+server.listen(process.env.port || 5000, '0.0.0.0', () => {
   console.log(`Server Started At PORT : ${port} {Ansa Media Project Backend}`)
 })
 
