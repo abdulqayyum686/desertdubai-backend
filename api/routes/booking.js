@@ -15,6 +15,7 @@ function bookingRouter(io) {
 
   router.post("/addbooking", bookingController.addBooking);
   router.get("/getallbookings", bookingController.getAllBookings);
+  router.put("/editbooking/:id", bookingController.editBooking);
 
   return router;
 }
