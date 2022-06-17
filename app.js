@@ -40,8 +40,10 @@ app.use(function (req, res, next) {
 });
 console.log("ok2");
 const bookingRouterFile = require("./api/routes/booking");
+const userRouterFile = require("./api/routes/user");
 
 app.use("/booking", bookingRouterFile.router);
+app.use("/user", userRouterFile.router);
 
 app.use("/hello", (req, res, next) => {
   console.log("ok");

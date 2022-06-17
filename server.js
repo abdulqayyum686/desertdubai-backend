@@ -6,6 +6,7 @@ const app = require('./app')
 var cors = require('cors')
 
 const bookingRouterFile = require('./api/routes/booking')
+const userRouterFile = require('./api/routes/user')
 ///cors issuenpm start
 app.use(
   cors({
@@ -25,6 +26,7 @@ const io = require('socket.io')(server, {
 })
 
 bookingRouterFile.bookingRouter(io)
+userRouterFile.userRouter(io)
 
 io.on('connection', (socket) => {
   console.log('New client connected')
